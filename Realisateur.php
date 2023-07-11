@@ -10,8 +10,30 @@ class Realisateur extends Personne
 		parent::__construct($nom, $prenom, $sexe, $dateNaissance);
 	}
 
-	public function ajouterFilm($film)
+	public function ajouterFilm(Film $film)
 	{
 		$this->films[] = $film;
+	}
+
+	public function setFilms(array $films)
+	{
+		$this->films = $films;
+	}
+
+	public function getFilms(): array
+	{
+		return $this->films;
+	}
+
+	// Affiche la filmographie du réalisateur
+
+	public function affichierFilms()
+	{
+		$result = "Filmographie du réalisateur : <br>";
+		$films = $this->getFilms();
+		foreach ($this->films as $film) {
+			$result .= $film->getTitre() . "<br>";
+		}
+		return $result;
 	}
 }
