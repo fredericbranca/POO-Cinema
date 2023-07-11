@@ -50,7 +50,10 @@ class Personne {
 	public function getDateNaissance(): DateTime {
 		return "Né(e) le : " . $this->dateNaissance . "<br>";
 	}
-}
 
 	// FIN SETTERS & GETTERS ------------------------------------
+
+	
+}
+
 
