@@ -1,13 +1,14 @@
 <?php
 
-class Personne {
+class Personne
+{
 	protected string $nom;
 	protected string $prenom;
 	protected string $sexe;
 	protected DateTime $dateNaissance;
 
 
-	function __construct(string $nom, string $prenom, string $sexe, DateTime $dateNaissance) 
+	function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance)
 	{
 		$this->nom = $nom;
 		$this->prenom = $prenom;
@@ -17,43 +18,49 @@ class Personne {
 
 	// SETTERS -----------------------------------------------
 
-	public function setNom(string $nom) {
+	public function setNom(string $nom)
+	{
 		$this->nom = $nom;
 	}
 
-	public function setPrenom(string $prenom) {
+	public function setPrenom(string $prenom)
+	{
 		$this->prenom = $prenom;
 	}
 
-	public function setSexe(string $sexe) {
+	public function setSexe(string $sexe)
+	{
 		$this->sexe = $sexe;
 	}
 
-	public function setDateNaissance(DateTime $dateNaissance) {
-		$this->dateNaissance = new DateTime($dateNaissance);
+	public function setDateNaissance(DateTime $dateNaissance)
+	{
+		$this->dateNaissance = $dateNaissance;
 	}
 
 	// GETTERS -------------------------------------------------
 
-	public function getNom(): string {
+	public function getNom(): string
+	{
 		return $this->nom;
 	}
 
-	public function getPrenom(): string {
-		return $this->Prenom;
+	public function getPrenom(): string
+	{
+		return $this->prenom;
 	}
 
-	public function getSexe(): string {
+	public function getSexe(): string
+	{
 		return $this->sexe;
 	}
 
-	public function getDateNaissance(): DateTime {
-		return "Né(e) le : " . $this->dateNaissance . "<br>";
+	public function getDateNaissance(): DateTime
+	{
+		return $this->dateNaissance;
 	}
 
 	// FIN SETTERS & GETTERS ------------------------------------
 
-	
+
 }
-
-
